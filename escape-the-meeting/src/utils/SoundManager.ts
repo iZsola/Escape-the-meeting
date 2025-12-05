@@ -310,7 +310,7 @@ export class SoundManager {
             // Using playAudioFile here would stop theme music anyway via stopActiveAudio
             // But we explicitly stopped it above to be safe
             const audio = new Audio(this.gameOverUrl);
-            audio.volume = 0.3
+            audio.volume = 0.2
             audio.play();
             this.activeAudio = audio; // Track this as active audio to prevent overlap
         } catch (e) {

@@ -32,7 +32,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
           </div>
           <div className="flex items-center">
             <ShieldAlert size={20} className="text-red-600 mr-2 flex-shrink-0" />
-            <span>Avoid <span className="text-red-600">MANAGERS</span> or excuse your way out!</span>
+            <span>Avoid <span className="text-red-600">MEETINGS</span> or excuse your way out!</span>
           </div>
         </div>
 

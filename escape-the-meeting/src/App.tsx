@@ -261,7 +261,7 @@ export default function EscapeTheMeeting() {
           const isEnemy = enemies.find(e => e.x === x && e.y === y);
           
           let content = null;
-          let cellClass = `w-8 h-8 md:w-10 md:h-10 border-2 border-black flex items-center justify-center relative transition-colors duration-300 `;
+          let cellClass = `w-10 h-10 md:w-12 md:h-12 border-2 border-black flex items-center justify-center relative transition-colors duration-300 `;
 
           if (tile === TILE_WALL) {
             cellClass += `${currentTheme.wall} pattern-diagonal-lines`;
@@ -269,21 +269,21 @@ export default function EscapeTheMeeting() {
           } else if (tile === TILE_START) {
             cellClass += "bg-green-100";
             content = <div className="text-xs font-bold text-green-700">IN</div>;
-          } else if (tile === TILE_EXIT) {
+          } else           if (tile === TILE_EXIT) {
             cellClass += "bg-indigo-100";
-            content = <Rocket size={24} className="text-indigo-700" strokeWidth={2.5} />;
+            content = <Rocket size={28} className="text-indigo-700" strokeWidth={2.5} />;
           } else if (tile === TILE_COFFEE) {
-            content = <Coffee size={20} className="text-amber-700 animate-pulse" strokeWidth={2.5} />;
+            content = <Coffee size={24} className="text-amber-700 animate-pulse" strokeWidth={2.5} />;
           } else {
             cellClass += "bg-white/90";
           }
 
           if (isEnemy) {
-             content = <Briefcase size={24} className="text-red-600 z-10 drop-shadow-sm" strokeWidth={2.5} />;
+             content = <Briefcase size={28} className="text-red-600 z-10 drop-shadow-sm" strokeWidth={2.5} />;
           }
 
           if (isPlayer) {
-             content = <Smile size={24} className="text-blue-600 z-20 drop-shadow-sm" strokeWidth={2.5} />;
+             content = <Smile size={28} className="text-blue-600 z-20 drop-shadow-sm" strokeWidth={2.5} />;
           }
 
           return (
