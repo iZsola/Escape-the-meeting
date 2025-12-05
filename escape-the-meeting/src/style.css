@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Bangers', cursive;
+  --font-body: 'Comic Neue', 'Comic Sans MS', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+h1, h2, button, .comic-font {
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+
+/* Halftone Pattern */
+.bg-halftone {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.text-stroke-3 {
+  -webkit-text-stroke: 3px black;
+}
+
+.text-stroke-2 {
+  -webkit-text-stroke: 2px black;
+}
+
+.pattern-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1f2937,
+    #1f2937 10px,
+    #111827 10px,
+    #111827 20px
+  );
+}
